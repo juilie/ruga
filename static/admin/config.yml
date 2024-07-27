@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: juilie/ruga
+  name: git-gateway
   branch: main
 
 media_folder: "static/uploads"
@@ -21,3 +20,13 @@ collections:
     file: "signup.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+  - name: "merch"
+    label: "Merch"
+    folder: "merch"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Image", name: "image", widget: "image" }
