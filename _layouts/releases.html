@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <style>
+    /* Mobile-first CSS */
+    .category-content {
+      display: none;
+    }
+    .category-header {
+      background-color: #f1f1f1;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      text-align: left;
+      outline: none;
+      width: 100%;
+      font-size: 18px;
+    }
+    .category-header:after {
+      content: '\002B';
+      font-size: 13px;
+      float: right;
+      margin-left: 5px;
+    }
+    .category-header.active:after {
+      content: "\2212";
+    }
+    .release {
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .release img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var headers = document.getElementsByClassName('category-header');
+      for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+          this.classList.toggle('active');
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

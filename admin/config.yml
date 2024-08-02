@@ -15,25 +15,49 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "releases"
-    label: "Releases"
-    folder: "_releases"
+   - name: "categories"
+    label: "Categories"
+    folder: "_categories"
     create: true
-    slug: "releases/{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {label: "Release Date", name: "date", widget: "datetime, required: false"}
-      - { label: "Description", name: "description", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Cover Image", name: "cover_image", widget: "image", required: true }
-      - { label: "Audio File", name: "audio_file", widget: "file", required: false }
-      - { label: "Bandcamp Link", name: "bandcamp_link", widget: "string", required: false }
-      - { label: "Spotify Link", name: "spotify_link", widget: "string", required: false }
-      - { label: "Apple Music Link", name: "apple_music_link", widget: "string", required: false }
-      - { label: "Soundcloud Link", name: "soundcloud_link", widget: "string", required: false }
-      - { label: "Youtube Link", name: "youtube_link", widget: "string", required: false }
-      - { label: "Tidal Link", name: "tidal_link", widget: "string", required: false }
-      - { label: "Amazon Music Link", name: "amazon_music_link", widget: "string", required: false }
-      - { label: "Google Play Link", name: "google_play_link", widget: "string", required: false }
-      - { label: "Deezer Link", name: "deezer_link", widget: "string", required: false }
-      - { label: "Embed", name: "embed", widget: "string", required: false }
+      - { label: "Category Name", name: "title", widget: "string" }
+
+  - name: "music_releases"
+    label: "Music Releases"
+    folder: "_music_releases"
+    create: true
+    slug: "releases/{{title | slugify}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Release Date", name: "release_date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Artist", name: "artist", widget: "string" }
+      - { label: "Category", name: "category", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title", displayFields: ["title"] }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Cover Image", name: "cover_image", widget: "image" }
+      - { label: "Tracks", name: "tracks", widget: "list", fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Duration", name: "duration", widget: "string" }
+        ]}
+      - { label: "Order", name: "order", widget: "number" }
+  # - name: "releases"
+  #   label: "Releases"
+  #   folder: "_releases"
+  #   create: true
+  #   slug: "releases/{{slug}}"
+  #   fields:
+  #     - { label: "Title", name: "title", widget: "string", required: true }
+  #     - {label: "Release Date", name: "date", widget: "datetime, required: false"}
+  #     - { label: "Description", name: "description", widget: "markdown", required: false }
+  #     - { label: "Link", name: "link", widget: "string", required: false }
+  #     - { label: "Cover Image", name: "cover_image", widget: "image", required: true }
+  #     - { label: "Audio File", name: "audio_file", widget: "file", required: false }
+  #     - { label: "Bandcamp Link", name: "bandcamp_link", widget: "string", required: false }
+  #     - { label: "Spotify Link", name: "spotify_link", widget: "string", required: false }
+  #     - { label: "Apple Music Link", name: "apple_music_link", widget: "string", required: false }
+  #     - { label: "Soundcloud Link", name: "soundcloud_link", widget: "string", required: false }
+  #     - { label: "Youtube Link", name: "youtube_link", widget: "string", required: false }
+  #     - { label: "Tidal Link", name: "tidal_link", widget: "string", required: false }
+  #     - { label: "Amazon Music Link", name: "amazon_music_link", widget: "string", required: false }
+  #     - { label: "Google Play Link", name: "google_play_link", widget: "string", required: false }
+  #     - { label: "Deezer Link", name: "deezer_link", widget: "string", required: false }
+  #     - { label: "Embed", name: "embed", widget: "string", required: false }
