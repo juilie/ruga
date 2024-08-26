@@ -37,3 +37,7 @@ a {
   a:hover, a:focus {
     background-color: var(--hover);
   }
+
+header {
+  text-align: center;
+}

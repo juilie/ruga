@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/static/css/default.css' | relative_url }}">
+
   <style>
     /* Mobile-first CSS */
     .category-content {
       display: none;
+      width: calc(100% - 44px);
+      padding: 10px 20px;
+      background-color: #ededf1;
+      border: black 2px solid;
     }
+
     .category-header {
-      background-color: #f1f1f1;
+      color: white;
+      background-color: #7168d5;
+      border: 2px solid black;
       cursor: pointer;
       padding: 10px;
-      border: none;
+      /* border: none; */
       text-align: left;
       outline: none;
       width: 100%;
       font-size: 18px;
     }
+
     .category-header:after {
       content: '\002B';
       font-size: 13px;
       float: right;
       margin-left: 5px;
     }
+
+    .category-section {
+      /* border: black 2px solid; */
+    }
+
+    .category-header.active {
+      border-bottom: none;
+    }
+
     .category-header.active:after {
       content: "\2212";
     }
+
     .release {
-      padding: 15px;
-      border-bottom: 1px solid #ddd;
+      position: relative;
+      float: left;
+      margin: 0;
+      overflow: hidden;
+      width: calc(100% / 2);
+      padding-bottom: 30px;
     }
+
+    .release a {
+      width: fit-content;
+    }
+
     .release img {
-      max-width: 100%;
+      max-width: min(200px, calc(100% - 20px));
+      /* width: calc(100% / 2) */
+    }
+
+    #music-releases {
+      max-width: 600px;
+      margin: 0 auto;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>{{ site.title }}</h1>
@@ -50,20 +86,21 @@
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       var headers = document.getElementsByClassName('category-header');
       for (var i = 0; i < headers.length; i++) {
-        headers[i].addEventListener('click', function() {
+        headers[i].addEventListener('click', function () {
           this.classList.toggle('active');
           var content = this.nextElementSibling;
-          if (content.style.display === "block") {
+          if (content.style.display === "inline-block") {
             content.style.display = "none";
           } else {
-            content.style.display = "block";
+            content.style.display = "inline-block";
           }
         });
       }
     });
   </script>
 </body>
+
 </html>

@@ -16,14 +16,18 @@ css: "/static/css/releases.css"
         {% assign releases = site.music_releases | where: "category", category.title | sort: "order" %}
         {% for release in releases %}
           <div class="release">
-            <img src="{{ release.cover_image }}" alt="{{ release.title }} cover">
-            <h2>{{ release.title }}</h2>
-            <p>{{ release.description }}</p>
-            <ul>
+          <div>
+            <img class="album-cover" src="{{ release.cover_image }}" alt="{{ release.title }} cover">
+          </div>
+          <div>
+            <a href="{{ release.url }}">{{ release.title }}</a>
+          </div>
+            <!-- <p>{{ release.description }}</p> -->
+            <!-- <ul>
               {% for track in release.tracks %}
                 <li>{{ track.title }} - {{ track.duration }}</li>
               {% endfor %}
-            </ul>
+            </ul> -->
           </div>
         {% endfor %}
       </div>

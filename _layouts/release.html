@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+  </header>
+  <main>
+    <article>
+      <h1>{{ page.title }}</h1>
+      <p>By {{ page.artist }}</p>
+      <img src="{{ page.cover_image }}" alt="{{ page.title }} cover">
+      <p>Release Date: {{ page.release_date }}</p>
+      <div>{{ page.content }}</div>
+      <h2>Tracks</h2>
+      <ul>
+        {% for track in page.tracks %}
+          <li>{{ track.title }} - {{ track.duration }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+  </footer>
+</body>
+</html>
