@@ -10,51 +10,47 @@
 
   <style>
     /* Mobile-first CSS */
-    .category-content {
-      display: none;
+    .releases-list {
       width: calc(100% - 44px);
       padding: 10px 20px;
       background-color: #ededf1;
-      border: black 2px solid;
+      /* border: black 2px solid; */
+      display: inline-block;
     }
 
-    .category-header {
+    .header {
       color: white;
       background-color: #7168d5;
-      border: 2px solid black;
-      cursor: pointer;
+      border-bottom: 2px solid black;
       padding: 10px;
-      /* border: none; */
       text-align: left;
       outline: none;
-      width: 100%;
-      font-size: 18px;
+      width: calc(100% - 20px);
+      font-size: 22px;
+      font-weight:500;
+      font-family: Verdana, Geneva, sans-serif;
     }
 
-    .category-header:after {
-      content: '\002B';
-      font-size: 13px;
-      float: right;
-      margin-left: 5px;
+    .album-cover-link:hover {
+      background-color: #F0F0F4;
     }
 
-    .category-section {
-      /* border: black 2px solid; */
+    .album-cover-link:hover img {
+      outline: 2px solid black;
+      outline-offset: 2px;
     }
+
 
     .category-header.active {
       border-bottom: none;
     }
 
-    .category-header.active:after {
-      content: "\2212";
-    }
 
     .release {
       position: relative;
       float: left;
       margin: 0;
-      overflow: hidden;
+      /* overflow: hidden; */
       width: calc(100% / 2);
       padding-bottom: 30px;
     }
@@ -71,6 +67,9 @@
     #music-releases {
       max-width: 600px;
       margin: 0 auto;
+      border: 2px solid black;
+      background-color: #ededf1;
+      height: 100%;
     }
   </style>
 </head>
@@ -85,22 +84,6 @@
   <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var headers = document.getElementsByClassName('category-header');
-      for (var i = 0; i < headers.length; i++) {
-        headers[i].addEventListener('click', function () {
-          this.classList.toggle('active');
-          var content = this.nextElementSibling;
-          if (content.style.display === "inline-block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "inline-block";
-          }
-        });
-      }
-    });
-  </script>
 </body>
 
 </html>

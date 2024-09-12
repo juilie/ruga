@@ -41,7 +41,7 @@ css: "/static/css/home.css"
             </a>
         </li>
         <li class="collection-item-3 w-dyn-item">
-            <a href="/about" class="tag-link w-inline-block">
+            <a href="/inquiry" class="tag-link w-inline-block">
                 <div class="tag-big">
                     <div style="background-color: #ffa9e2" class="tag-color-big"></div>
                     <div class="button-text">Bookings, Lessons & Inquiries</div>
