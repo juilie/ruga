@@ -1,0 +1,13 @@
+.show-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

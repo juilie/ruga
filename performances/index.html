@@ -1,18 +1,37 @@
 ---
 layout: default
-title: Blog
+title: Performances
+css: "/static/css/performances.css"
 ---
-  {% for post in site.posts %}
-  <article class="post" style="border: 2px solid black; width: 90%; margin: 0 auto;">
-    <div style="background-color: #ffa9e2; border-bottom: 2px solid black; padding: 10px;">
-    <h1 style="margin: 0;">{{ post.title }}</h1></div>
-
-    <div style="padding: 10px;">
-      <p >{{ post.content }}</p>
-
-    </div>
-  </article>
-  <!-- <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </li> -->
-  {% endfor %}
+<div class="show-container">
+  <!-- {% for post in site.posts %} -->
+  <section>
+    <h2>Upcoming</h2>
+    <article class="post" style="border: 2px solid black; width: 90%; margin: 0 auto;">
+      <div style="background-color: #ffa9e2; border-bottom: 2px solid black; padding: 0px 10px; display: flex; justify-content: space-between; align-items: center;">
+      <h2 style="margin: 0;">July 28th, 2024 </h2><h2>7pm</h2>
+      </div>
+      <div style="padding: 10px;">
+        <p>Location</p>
+        <p>Date</p>
+        <p>Other Acts</p>
+        <p>Time</p>
+      </div>
+    </article>
+    <article class="post" style="border: 2px solid black; width: 90%; margin: 0 auto;">
+      <div style="background-color: #ffa9e2; border-bottom: 2px solid black; padding: 0px 10px; display: flex; justify-content: space-between; align-items: center;">
+      <h2 style="margin: 0;">July 28th, 2024 </h2><h2>7pm</h2>
+      </div>
+      <div style="padding: 10px;">
+        <p>Location</p>
+        <p>Date</p>
+        <p>Other Acts</p>
+        <p>Time</p>
+      </div>
+    </article>
+  </section>
+  <section>
+    <h2>Past</h2>
+  </section>
+  <!-- {% endfor %} -->
+</div>

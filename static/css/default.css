@@ -22,14 +22,6 @@ html {
     height: 100%;
 }
 
-footer {
-    /* position: absolute; */
-    /* bottom: 0px; */
-    width: 100%;
-    text-align: center;
-    /* height: 2.5rem;  */
-}
-
 a {
     color: var(--accent);
     text-decoration: underline;
