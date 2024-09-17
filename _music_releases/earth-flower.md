@@ -1,4 +1,5 @@
 ---
+layout: release
 title: Earth Flower
 release_date: 2024-03-15
 artist: Earth Flower

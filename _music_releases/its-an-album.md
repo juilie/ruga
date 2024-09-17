@@ -1,4 +1,5 @@
 ---
+layout: release
 title: It's an album
 release_date: 2024-08-26
 artist: Ruth Garbus

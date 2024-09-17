@@ -28,21 +28,22 @@ collections:
     create: true
     slug: "{{title | slugify}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "music_release" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Release Date", name: "release_date", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Cover Image", name: "cover_image", widget: "image" }
       - { label: "Artist", name: "artist", widget: "string" }
       - { label: "Category", name: "category", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title", displayFields: ["title"], required: false }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Credits", name: "credits", widget: "list", fields: [
             { label: "Name", name: "name", widget: "string" },
             { label: "Role", name: "role", widget: "string" }
         ]}
-      - { label: "Links", name: "links", widget: "list", fields: [
+      - { label: "Links", name: "links", widget: "list", required: false, fields: [
             { label: "Link", name: "link", widget: "string" },
             { label: "Platform", name: "platform", widget: "string" }
         ]}
-      - { label: "Embed", name: "embed", widget: "list", fields: [
+      - { label: "Embed", name: "embed", widget: "list", required: false,  fields: [
             { label: "Embed Code", name: "embed_code", widget: "text" },
             { label: "Platform", name: "platform", widget: "string" }
         ]}

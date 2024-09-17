@@ -1,4 +1,5 @@
 ---
+layout: release
 title: test release
 release_date: 2024-08-26
 artist: ruthie

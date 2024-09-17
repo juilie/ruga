@@ -1,4 +1,5 @@
 ---
+layout: release
 title: Test another time
 release_date: 2024-09-12
 artist: Ruth Garbus Trio
