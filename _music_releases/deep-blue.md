@@ -13,6 +13,11 @@ description: >-
 
 
   BLUE DISH will be celebrating the release of their album on Saturday, January 28th at the Echo Lounge or the Blue Moose Bistro @ 8:15 in Brattleboro.
+credits:
+  - name: julie bodian
+    role: steel string
+  - name: elie mcafee-hahn
+    role: gut string
 links:
   - link: https://tandy.bandcamp.com/album/deep-blue
     platform: bandcamp
