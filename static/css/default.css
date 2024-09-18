@@ -34,3 +34,10 @@ a {
 header {
   text-align: center;
 }
+
+header a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.25em;
+  padding: 0 10px;
+}

@@ -1,59 +1,79 @@
 .main {
-    display: grid;
-    gap: 16px;
-    max-width: 800px;
-    width: 90%;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    margin-top: 50px;
-  }
-  
-  .main > div {
-    min-width: 150px;
-    min-height: 150px;
-    /* background-color: #ff0000A0; */
-    display: flex;
-    flex-direction: column;
-  /*   aspect-ratio: 1; */
-  }
-  
-  .main > div > img {
-    width: 100%;
-    height: 100%;
-    border: 2px solid black;
-  }
+  display: grid;
+  gap: 16px;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-top: 50px;
+}
 
-  .main > div > p {
-    margin: 0;
-    /* padding: 5px; */
-    border: 2px solid black;
-    border-top: none;
-    padding: 10px 0;
-    background-color: #f2f1fb;
-    /* color: white; */
-    font-size: large;
-    width: 100%;
-    text-align: center;
-  }
+.release-tile {
+  min-width: 150px;
+  min-height: 150px;
+  /* background-color: #ff0000A0; */
+  display: flex;
+  flex-direction: column;
+  /*   aspect-ratio: 1; */
+}
+
+.release-tile img {
+  width: 100%;
+  /* height: 100%; */
+  aspect-ratio: 1;
+  border: 2px solid black;
+}
+
+.release-tile p {
+  margin: 0;
+  /* padding: 5px; */
+  border: 2px solid black;
+  border-top: none;
+  padding: 10px 0;
+  background-color: #f2f1fb;
+  /* color: white; */
+  font-size: large;
+  width: 100%;
+  text-align: center;
+}
+
+.release-tile:hover p {
+  background-color: rgb(217, 204, 156)
+  /* background-color: var(--hover); */
+}
+
 
 .page-title {
-    background-color: white;
-    width: fit-content;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 10px;
-    border: 2px solid black;
-    margin-left: 20px;
-    margin-bottom: 40px;
+  background-color: white;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  border: 2px solid black;
+  margin-left: 20px;
+  margin-bottom: 40px;
 }
 
 .title-color {
-    background-color: #f2f1fb;
-    height: 100%;
-    aspect-ratio: 1;
+  background-color: #f2f1fb;
+  height: 100%;
+  aspect-ratio: 1;
 }
 
-.page-title > h2 {
-    margin: 5px;
-    margin-right: 10px;
+.page-title>h2 {
+  margin: 5px;
+  margin-right: 10px;
+}
+
+/* Ensure the anchor tag behaves like a block-level element */
+.release-tile a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.release-tile a img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

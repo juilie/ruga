@@ -7,26 +7,31 @@ artist: BLUE DISH
 description: >-
   Soaring melodies and soothing tones, BLUE DISH’s sophomore album welcomes you
   Into the Blue. Drawing upon a vast array of influences — from Jazz to Blues
-  (and even Classical) — BLUE DISH defies genre at every moment. Rather than
-  rushing the album to meet a deadline, the duo took their time, finding the
-  right melodies, the right chords, and the right Sound.
-
-
-  BLUE DISH will be celebrating the release of their album on Saturday, January 28th at the Echo Lounge or the Blue Moose Bistro @ 8:15 in Brattleboro.
+  (and even Classical) — BLUE DISH defies genre at every moment.
 credits:
   - name: julie bodian
     role: steel string
   - name: elie mcafee-hahn
     role: gut string
 links:
-  - link: https://tandy.bandcamp.com/album/deep-blue
-    platform: bandcamp
-  - platform: Tandy Website
-    link: https://pcotandy.org
-embed:
+  - url: https://tandy.bandcamp.com/album/deep-blue
+    text: bandcamp
+  - text: Tandy Website
+    url: https://pcotandy.org
+  - text: Something else
+    url: https://pcotandy.org
+  - text: Something good
+    url: https://pcotandy.org
+embeds:
   - platform: Bandcamp
-    embed_code: '<iframe style="border: 0; width: 350px; height: 470px;"
+    code: '<iframe style="border: 0; width: 350px; height: 470px;"
       src="https://bandcamp.com/EmbeddedPlayer/album=2259453688/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
       seamless><a href="https://tandy.bandcamp.com/album/deep-blue">Deep Blue by
       BLUE DISH</a></iframe>'
+  - platform: Bandcamp
+    code: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2259453688/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://tandy.bandcamp.com/album/deep-blue">Deep Blue by BLUE DISH</a></iframe>'
+  - platform: Bandcamp
+    code: '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2259453688/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://tandy.bandcamp.com/album/deep-blue">Deep Blue by BLUE DISH</a></iframe>'
+  - platform: Bandcamp
+    code: '<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2259453688/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://tandy.bandcamp.com/album/deep-blue">Deep Blue by BLUE DISH</a></iframe>'
 ---

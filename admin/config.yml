@@ -40,10 +40,10 @@ collections:
             { label: "Role", name: "role", widget: "string" }
         ]}
       - { label: "Links", name: "links", widget: "list", required: false, fields: [
-            { label: "Link", name: "link", widget: "string" },
-            { label: "Platform", name: "platform", widget: "string" }
+            { label: "Link", name: "url", widget: "string" },
+            { label: "Text", name: "text", widget: "string" }
         ]}
-      - { label: "Embed", name: "embed", widget: "list", required: false,  fields: [
-            { label: "Embed Code", name: "embed_code", widget: "text" },
+      - { label: "Embeds", name: "embeds", widget: "list", required: false,  fields: [
+            { label: "Embed Code", name: "code", widget: "text" },
             { label: "Platform", name: "platform", widget: "string" }
         ]}

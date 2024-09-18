@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,48 +19,67 @@
   <meta name="twitter:card" content="summary" />
   <meta property="twitter:title" content="{{ page.title | escape }}" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "description": "{{ page.description | default: site.description | escape }}",
-    "headline": "{{ page.title | escape }}",
-    "name": "{{ site.title | escape }}",
-    "url": "{{ page.url | absolute_url }}"
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "description": "{{ page.description | default: site.description | escape }}",
+      "headline": "{{ page.title | escape }}",
+      "name": "{{ site.title | escape }}",
+      "url": "{{ page.url | absolute_url }}"
+    }
   </script>
   <!-- End Jekyll SEO tag -->
 
   <!-- <link rel="stylesheet" href="/static/css/default.css"> -->
-  <link type="application/atom+xml" rel="alternate" href="{{ "/feed.xml" | absolute_url }}" title="{{ site.title }}" />
+  <link type="application/atom+xml" rel="alternate" href="{{ " /feed.xml" | absolute_url }}" title="{{ site.title }}" />
 
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/static/css/default.css' | relative_url }}">
-    <!-- Page-specific CSS -->
-    {% if page.css %}
-    <link rel="stylesheet" href="{{ page.css | relative_url }}">
-  {% endif %}
+  <link rel="stylesheet" href="/static/css/music_release.css">
+
 </head>
+
 <body>
   <header>
     <h1><a href="/">{{ site.title }}</a></h1>
   </header>
-  <main> 
-    <article>
-      <h1>{{ page.title }}</h1>
-      <p>By {{ page.artist }}</p>
-      <img src="{{ page.cover_image }}" alt="{{ page.title }} cover">
-      <p>Release Date: {{ page.release_date }}</p>
-      <div>{{ page.content }}</div>
-      <h2>Tracks</h2>
-      <ul>
-        {% for track in page.tracks %}
-          <li>{{ track.title }} - {{ track.duration }}</li>
-        {% endfor %}
-      </ul>
-    </article>
+  <main>
+    <h2>{{ page.title }}</h2>
+    <img src="{{ page.cover_image }}" alt="{{ page.title }} cover">
+    <!-- <p>By {{ page.artist }}</p> -->
+    <!-- <p>Released: {{ page.release_date }}</p> -->
+    <div class="link-list">
+      {% for link in page.links %}
+      <a href="{{ link.url }}">{{ link.text }}</a>
+      {% endfor %}
+    </div>
+
+    <p>{{page.description}}</p>
+
+    <div class="embeds">
+      {% for embed in page.embeds %}
+      {{ embed.code }}
+      {% endfor %}
+    </div>
+    
+    <h3>Credits</h3>
+    <table>
+      <tr>
+        <th>Contribution</th>
+        <th>Name</th>
+      </tr>
+      {% for credit in page.credits %}
+      <tr>
+        <td>{{ credit.role }}</td>
+        <td>{{ credit.name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
   </main>
-  <footer>
+  <!-- <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
-  </footer>
+  </footer> -->
 </body>
+
 </html>
