@@ -21,6 +21,21 @@ collections:
     create: true
     fields:
       - { label: "Category Name", name: "title", widget: "string" }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Press Kit"
+        name: "press_kit"
+        file: "press_kit.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Header Image", name: "header_image", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Downloadable Files", name: "downloads", widget: "list", fields: [
+              { label: "File", name: "file", widget: "file" },
+              { label: "Description", name: "description", widget: "string" }
+            ] }
+
   - name: "press"
     label: "Press Kit"
     folder: "_press"
