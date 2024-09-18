@@ -21,6 +21,31 @@ collections:
     create: true
     fields:
       - { label: "Category Name", name: "title", widget: "string" }
+  - name: "press"
+    label: "Press Kit"
+    folder: "_press"
+    create: true
+    slug: "{{title | slugify}}"
+    fields:
+      - { label: "Bio", name: "bio", widget: "markdown" }
+      - { label: "Profile Picture", name: "profile_pic", widget: "image" }
+      - { label: "Links", name: "links", widget: "list", required: false, fields: [
+            { label: "Link", name: "url", widget: "string" },
+            { label: "Text", name: "text", widget: "string" }
+        ]}
+      - { label: "Embeds", name: "embeds", widget: "list", required: false,  fields: [
+            { label: "Embed Code", name: "code", widget: "text" },
+            { label: "Platform", name: "platform", widget: "string" }
+        ]}
+      - { label: "Press Quotes", name: "press_quotes", widget: "list", required: false, fields: [
+            { label: "Quote", name: "quote", widget: "text" },
+            { label: "Source", name: "source", widget: "string" }
+        ]}
+      - { label: media, name: "media", widget: "list", required: false, fields: [
+            { label: "Media", name: "media", widget: "file" },
+            { label: "Description", name: "description", widget: "string" }
+        ]}
+      - { label: zip, name: "zip file", widget: "file", required: false }
 
   - name: "releases"
     label: "Music Releases"

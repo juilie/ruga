@@ -5,6 +5,8 @@ permalink: /about/
 css: "/static/css/about.css"
 ---
 
+Booking: gil@firstdatetouring.com
+
 <div class="bio-and-pic">
     <img src="/static/uploads/ruth.jpg" alt="Profile Picture" class="profile-pic">
     <div class="bio">
