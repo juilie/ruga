@@ -1,7 +1,7 @@
 ---
 layout: music_release
 title: Earth Flower
-release_date: 2024-09-19
+release_date: 2024-03-15
 cover_image: /static/uploads/earth-flower.jpg
 artist: Earth Flower
 category: Earth Flower
