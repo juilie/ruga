@@ -1,5 +1,6 @@
 ---
 layout: about
+permalink: /about/
 contacts:
   - role: Booking
     email: gil@firstdatetouring.com

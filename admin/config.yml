@@ -29,6 +29,7 @@ collections:
         file: "press_kit.md"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "about" }
           - { label: "Contacts", name: "contacts", widget: "list", fields: [
               { label: "Role", name: "role", widget: "string" },
               { label: "Email", name: "email", widget: "string" }
