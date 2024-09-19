@@ -38,11 +38,12 @@ main a {
 
 table {
     border-collapse: collapse;
-    max-width: 90%;
-    width: 500px;
+    width: 90%;
     margin-bottom: 20px;
+    margin: 0 auto;
     table-layout: fixed;
     text-align: center;
+    display: table;
 }
 
 tr {
@@ -79,4 +80,9 @@ td {
 
 iframe {
     max-width: 95%;
+}
+
+.table-container {
+    width: 600px;
+    max-width: 100%;
 }

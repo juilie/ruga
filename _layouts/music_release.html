@@ -70,18 +70,20 @@
     
     {% if page.credits %}
     <h3>Credits</h3>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Contribution</th>
-      </tr>
-      {% for credit in page.credits %}
-      <tr>
-        <td>{{ credit.name }}</td>
-        <td>{{ credit.role }}</td>
-      </tr>
-      {% endfor %}
-    </table>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Contribution</th>
+        </tr>
+        {% for credit in page.credits %}
+        <tr>
+          <td>{{ credit.name }}</td>
+          <td>{{ credit.role }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
     {% endif %}
   </main>
   <!-- <footer>
