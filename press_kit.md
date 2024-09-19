@@ -26,4 +26,10 @@ media:
     image: /static/uploads/alivepoeple.jpg
   - type: Image
     image: /static/uploads/officehours.jpg
+press:
+  - publication: Talkhouse
+    url: https://www.talkhouse.com/im-really-big/
+  - publication: Pitchfork
+    quote: Alive People elevates Garbus’ practice to a rarefied plane.
+    url: https://pitchfork.com/reviews/albums/ruth-garbus-alive-people/
 ---
