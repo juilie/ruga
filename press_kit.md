@@ -27,9 +27,12 @@ media:
   - type: Image
     image: /static/uploads/officehours.jpg
 press:
-  - publication: Talkhouse
-    url: https://www.talkhouse.com/im-really-big/
   - publication: Pitchfork
     quote: Alive People elevates Garbus’ practice to a rarefied plane.
     url: https://pitchfork.com/reviews/albums/ruth-garbus-alive-people/
+  - publication: Talkhouse
+    url: https://www.talkhouse.com/im-really-big/
+    quote: In July, I did three performances that felt like I had leveled up as a
+      musician. They were the best performances I’ve ever done. I felt free.
+      Raw, loose power and freakishness were finally there with me on stage.
 ---
