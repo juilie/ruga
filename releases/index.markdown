@@ -12,7 +12,7 @@ css: "/static/css/releases.css"
 </div> -->
 
 <div class="main">
-  {% assign releases = site.music_releases %}
+  {% assign releases = site.music_releases | sort: "release_date" | reverse %}
   {% for release in releases %}
   <div class="release-tile">
   <a href="{{ release.url }}">

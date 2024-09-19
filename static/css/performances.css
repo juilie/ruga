@@ -1,5 +1,6 @@
 .show-container {
-    max-width: 600px;
+    width: 600px;
+    max-width: 95%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -42,7 +43,7 @@ section {
 
 .show-town {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .show-info {

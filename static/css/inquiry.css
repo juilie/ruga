@@ -66,3 +66,16 @@ form {
 /* html, body {
     background-color:#ece9eb;
 } */
+
+p {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 19px;
+    color: #333;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: var(--bg-2);
+    max-width: calc(90% - 40px);
+    width: 700px;
+    border: 2px solid #000;
+    padding: 20px;
+}

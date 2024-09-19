@@ -7,6 +7,7 @@ title: Inquiries
 css: "/static/css/inquiry.css"
 ---
 
+<p>Rates for lessons are $1million dollars on a sliding scale. That's also how much you need to pay me each show.</p>
 
 <form name="Inquiry-form" action="https://api.web3forms.com/submit" method="POST"  aria-label="Inquiries Form">
 <input type="hidden" name="access_key" value="767548e7-7fbb-4061-9f4c-8808bebd5c42">
