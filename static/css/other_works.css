@@ -1,0 +1,17 @@
+iframe {
+    max-width: 100%;
+}
+
+article {
+    width: 700px;
+    max-width: 90%;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}

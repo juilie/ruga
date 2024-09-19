@@ -1,4 +1,5 @@
 ---
+layout: default
 title: New Planet Discovery
 date: 2024-09-19T15:27:30.013Z
 ---

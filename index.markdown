@@ -17,7 +17,7 @@ css: "/static/css/home.css"
             </a>
         </li>
         <li class="collection-item-3 w-dyn-item">
-            <a href="/blog" class="tag-link w-inline-block">
+            <a href="/works" class="tag-link w-inline-block">
                 <div class="tag-big">
                     <div style="background-color: #b0e26c" class="tag-color-big"></div>
                     <div class="button-text">Other Work</div>

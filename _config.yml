@@ -22,6 +22,9 @@ collections:
   music_releases:
     output: true
     permalink: /releases/:title/
+  other_works:
+    output: true
+    permalink: /works/:title/
 
 # Exclude from processing
 exclude:

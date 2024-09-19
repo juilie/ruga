@@ -1,15 +1,20 @@
 ---
 layout: default
 title: Other Work
+css: "/static/css/other_works.css"
 ---
-  {% for post in site.posts %}
-  <article class="post" style="border: 2px solid black; width: 90%; margin: 0 auto;">
+{% assign works = site.other_works | sort: "date" | reverse %}
+<div class="container">
+
+{% for work in works %}
+  <article class="post">
     <div style="background-color: #b0e26c; border-bottom: 2px solid black; padding: 10px;">
-    <h1 style="margin: 0;">{{ post.title }}</h1></div>
+    <h1 style="margin: 0;">{{ work.title }}</h1></div>
 
     <div style="padding: 10px;">
-      <p >{{ post.content }}</p>
+      <p >{{ work.content | markdownify }}</p>
 
     </div>
   </article>
   {% endfor %}
+  </div>

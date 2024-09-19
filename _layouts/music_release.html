@@ -54,14 +54,21 @@
       {% endfor %}
     </div>
 
-    <p>{{page.description}}</p>
+    {% if page.description %}
+    <p class="album-description">
+      {{page.description}}
+    </p>
+    {% endif %}
 
+    {% if page.embeds %}
     <div class="embeds">
       {% for embed in page.embeds %}
       {{ embed.code }}
       {% endfor %}
     </div>
+    {% endif %}
     
+    {% if page.credits %}
     <h3>Credits</h3>
     <table>
       <tr>
@@ -75,7 +82,7 @@
       </tr>
       {% endfor %}
     </table>
-
+    {% endif %}
   </main>
   <!-- <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
