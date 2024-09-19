@@ -85,9 +85,12 @@
 
     <section class="media-section">
       <div class="media-title"><h2>Press</h2></div>
-      <div class="media-list">
-        {% for media_item in page.media %}
-        
+      <div class="press-list">
+        {% for article in page.press %}
+        <div class="press-quote">
+          <q>{{ article.quote }}</q>
+          <a href="{{ article.url }}" target="_blank">{{ article.publication }}</a>
+        </div>
         {% endfor %}
       </div>
     </section>

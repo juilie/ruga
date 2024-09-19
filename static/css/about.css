@@ -143,3 +143,34 @@
   .file-download:hover {
     background-color: var(--hover);
   }
+
+  .press-quote {
+    background-color: var(--bg-2);
+    width: 500px;
+    padding: 20px;
+    border: 2px solid black;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 21px;
+    text-align: left;
+  }
+
+  .press-quote a {
+    background-color: var(--accent);
+    color: white;
+    border: 2px solid black;
+    width: fit-content;
+    padding: 10px;
+  }
+
+  .press-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
