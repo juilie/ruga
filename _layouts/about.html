@@ -52,7 +52,7 @@
             {% endfor %}
             <div>
               {% for file in page.downloads %}
-                <a href="{{ file.file }}" class="file-download fa-download fa" download>&nbsp;&nbsp;{{ file.description }}</a>
+                <a href="{{ file.file }}" class="file-download fa-download fa" download>&nbsp;&nbsp;<span>{{ file.description }}</span></a>
               {% endfor %}
             </div>
             <div class="bio">
@@ -60,6 +60,7 @@
             </div>
         </div>
         <div class="media-list">
+          <h2>Media</h2>
             {% for media_item in page.media %}
               <div class="media-item">
                 {% if media_item.type == "Image" %}

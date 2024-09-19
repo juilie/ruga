@@ -35,9 +35,21 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     width: 800px;
-    max-width: 95%;
+    max-width: calc(95% - 40px);
     margin: 0 auto;
     margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azure);
+    padding: 20px;
+    border: 2px solid black;
+  }
+
+  .media-list h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
   }
   
   .media-item {
@@ -48,6 +60,7 @@
   .media-item video {
     max-width: 100%;
     height: auto;
+    border: 2px solid black;
   }
   
   .video-wrapper {
@@ -69,4 +82,14 @@
     padding: 10px;
     border: 2px solid black;
     text-decoration: none;
+    color: black;
+  }
+  
+  .file-download span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-weight: bold;  
+  }
+
+  .file-download:hover {
+    background-color: var(--hover);
   }

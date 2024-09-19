@@ -45,7 +45,7 @@
   </header>
   <main>
     <h2>{{ page.title }}</h2>
-    <img src="{{ page.cover_image }}" alt="{{ page.title }} cover">
+    <img src="{{ page.cover_image }}" alt="{{ page.title }} cover" class="album-cover">
     <!-- <p>By {{ page.artist }}</p> -->
     <!-- <p>Released: {{ page.release_date }}</p> -->
     <div class="link-list">
@@ -65,13 +65,13 @@
     <h3>Credits</h3>
     <table>
       <tr>
-        <th>Contribution</th>
         <th>Name</th>
+        <th>Contribution</th>
       </tr>
       {% for credit in page.credits %}
       <tr>
-        <td>{{ credit.role }}</td>
         <td>{{ credit.name }}</td>
+        <td>{{ credit.role }}</td>
       </tr>
       {% endfor %}
     </table>

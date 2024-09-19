@@ -70,3 +70,9 @@ td {
     gap: 10px;
     justify-content: center;
 }
+
+.album-cover {
+    width: 500px;
+    max-width: 90%;
+    border: 2px solid black;
+}
