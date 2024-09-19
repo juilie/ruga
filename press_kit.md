@@ -1,4 +1,5 @@
 ---
+layout: about
 contacts:
   - role: Booking
     email: gil@firstdatetouring.com
@@ -24,6 +25,4 @@ media:
     image: /static/uploads/alivepoeple.jpg
   - type: Image
     image: /static/uploads/officehours.jpg
-  - type: Video (URL)
-    video_url: https://www.youtube.com/watch?v=u5rBhhlkm2s
 ---

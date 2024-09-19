@@ -28,3 +28,45 @@
     /* margin: 20px; */
     font-size: 21px;
 }
+
+
+.media-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 800px;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .media-item {
+    text-align: center;
+  }
+  
+  .media-item img,
+  .media-item video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+  }
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .file-download {
+    background-color: var(--bg-2);
+    padding: 10px;
+    border: 2px solid black;
+    text-decoration: none;
+  }
