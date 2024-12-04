@@ -41,4 +41,12 @@ credits:
 links:
   - url: https://ruthgarbus.bandcamp.com/album/kleinmeister
     text: Bandcamp
+embeds:
+  - code: <iframe width="560" height="315"
+      src="https://www.youtube-nocookie.com/embed/KouK4n3H1ME?si=dKFnBD0M3vg_7Mra"
+      title="YouTube video player" frameborder="0" allow="accelerometer;
+      autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+      web-share" referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+    platform: Youtube
 ---
