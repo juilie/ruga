@@ -1,7 +1,20 @@
 :root {
-    --accent: #e8963f;
-    --main-text: Georgia, 'Times New Roman', Times, serif;
+    /* --accent: #e8963f; */
+    /* --main-text: Georgia, 'Times New Roman', Times, serif; */
+    /* --main-text: 'Trebuchet MS', Helvetica, sans-serif; */
+    /* --main-text: Arial, sans-serif; */
+    /* --main-text: Helvetica, sans-serif; */
+    /* --main-text: Verdana, sans-serif; */
+    /* --main-text: Tahoma, sans-serif; */
+    /* --main-text: 'Trebuchet MS', sans-serif; */
+    --main-text: 'Gill Sans', sans-serif;
+    /* --main-text: 'Lucida Sans', sans-serif; */
+    /* --main-text: 'Century Gothic', sans-serif; */
+    /* --main-text: 'Calibri', sans-serif; */
+    /* --main-text: 'Segoe UI', sans-serif; */
+
     --header-text: Arial, Helvetica, sans-serif;
+    --button-text: Arial, Helvetica, sans-serif;
     --header-letter-spacing: 4px;
     --main-letter-spacing: 1px;
 }
@@ -11,7 +24,7 @@ body {
     letter-spacing: var(--main-letter-spacing);
 }
 
-header, h1, h2, h3, h4, h5, h6 {
+header, h1, h2, h3, h4, h5, h6, th {
     font-family: var(--header-text);
     letter-spacing: var(--header-letter-spacing);
 }
@@ -24,4 +37,8 @@ p {
 .button-text {
     font-family: var(--main-text);
     letter-spacing: var(--main-letter-spacing);
+}
+
+button, a {
+    font-family: var(--button-text);
 }
