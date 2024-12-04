@@ -19,7 +19,7 @@ links:
     url: https://open.spotify.com/artist/4n4AixYCSIn4H5BriyTEhm
 embeds:
   - code: <iframe width="560" height="315"
-      src="https://www.youtube-nocookie.com/embed/S5VrXjRb6UM?si=Bkt-Dop5i48LqZ2d"
+      src="https://www.youtube-nocookie.com/embed/S5VrXjRb6UM?si=PeuDgbj88-p49Mbw&amp;controls=0"
       title="YouTube video player" frameborder="0" allow="accelerometer;
       autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
       web-share" referrerpolicy="strict-origin-when-cross-origin"
