@@ -31,6 +31,7 @@
   <!-- End Jekyll SEO tag -->
 
   <!-- <link rel="stylesheet" href="/static/css/default.css"> -->
+  <link rel="stylesheet" href="{{ '/static/css/common.css' | relative_url }}">
   <link type="application/atom+xml" rel="alternate" href="{{ " /feed.xml" | absolute_url }}" title="{{ site.title }}" />
 
   <title>{{ page.title }}</title>
@@ -45,7 +46,7 @@
   </header>
   <main>
     <h2>{{ page.title }}</h2>
-    <img src="{{ page.cover_image }}" alt="{{ page.title }} cover" class="album-cover">
+   
     <!-- <p>By {{ page.artist }}</p> -->
     <!-- <p>Released: {{ page.release_date }}</p> -->
     <div class="link-list">
@@ -85,6 +86,7 @@
       </table>
     </div>
     {% endif %}
+    <img src="{{ page.cover_image }}" alt="{{ page.title }} cover" class="album-cover">
   </main>
   <!-- <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>

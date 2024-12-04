@@ -17,18 +17,18 @@ css: "/static/css/home.css"
             </a>
         </li>
         <li class="collection-item-3 w-dyn-item">
-            <a href="/works" class="tag-link w-inline-block">
-                <div class="tag-big">
-                    <div style="background-color: #b0e26c" class="tag-color-big"></div>
-                    <div class="button-text">Other Work</div>
-                </div>
-            </a>
-        </li>
-        <li class="collection-item-3 w-dyn-item">
             <a href="/performances" class="tag-link w-inline-block">
                 <div class="tag-big">
                     <div style="background-color: #ffa9e2" class="tag-color-big"></div>
                     <div class="button-text">Performances</div>
+                </div>
+            </a>
+        </li>
+                <li class="collection-item-3 w-dyn-item">
+            <a href="/works" class="tag-link w-inline-block">
+                <div class="tag-big">
+                    <div style="background-color: #f9f66b" class="tag-color-big"></div>
+                    <div class="button-text">Other Work</div>
                 </div>
             </a>
         </li>
@@ -43,7 +43,7 @@ css: "/static/css/home.css"
         <li class="collection-item-3 w-dyn-item">
             <a href="/inquiry" class="tag-link w-inline-block">
                 <div class="tag-big">
-                    <div style="background-color: #ffa9e2" class="tag-color-big"></div>
+                    <div style="background-color: #e8963f" class="tag-color-big"></div>
                     <div class="button-text">Bookings, Lessons & Inquiries</div>
                 </div>
             </a>

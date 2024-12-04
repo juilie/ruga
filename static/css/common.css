@@ -1,0 +1,27 @@
+:root {
+    --accent: #e8963f;
+    --main-text: Georgia, 'Times New Roman', Times, serif;
+    --header-text: Arial, Helvetica, sans-serif;
+    --header-letter-spacing: 4px;
+    --main-letter-spacing: 1px;
+}
+
+body {
+    font-family: var(--main-text);
+    letter-spacing: var(--main-letter-spacing);
+}
+
+header, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-text);
+    letter-spacing: var(--header-letter-spacing);
+}
+
+p {
+    font-family: var(--main-text);
+    letter-spacing: var(--main-letter-spacing);
+}
+
+.button-text {
+    font-family: var(--main-text);
+    letter-spacing: var(--main-letter-spacing);
+}
