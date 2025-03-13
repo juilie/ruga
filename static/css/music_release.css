@@ -1,3 +1,21 @@
+body, html {
+    /* animation: fadeIn 1s ease-in-out forwards; */
+    /* background-color: #ffbbf3; */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      background-color: #ffbbf3;
+    }
+    50% {
+      background-color: #bcd7ff;
+    }
+    100% {
+      background-color: #fc9de9;
+    }
+  }
+  
+
 main {
     display: flex;
     flex-direction: column;

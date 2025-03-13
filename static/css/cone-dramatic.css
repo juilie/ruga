@@ -1,0 +1,42 @@
+/* Enhanced style for the more dramatic cone gradient */
+
+.gradient-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10000;
+  opacity: 0;
+  mix-blend-mode: overlay;
+  will-change: transform, opacity;
+}
+
+.gradient-overlay.active {
+  animation: dramaticSpin var(--transition-duration) cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes dramaticSpin {
+  0% {
+    opacity: 1;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(2) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3) rotate(360deg);
+  }
+}
+
+/* Add a subtle glow to the page content during transition */
+main {
+  transition: filter var(--transition-duration) ease;
+}
+
+body.transitioning main {
+  filter: brightness(1.1);
+} 

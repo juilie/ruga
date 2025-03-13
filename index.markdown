@@ -7,6 +7,7 @@ title: Home
 css: "/static/css/home.css"
 ---
 <nav>
+    <img src="/static/ruth.jpg" width="90" height="90" alt="logo">
     <ul>
         <li class="collection-item-3 w-dyn-item">
             <a href="/releases" class="tag-link w-inline-block">

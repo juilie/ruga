@@ -12,8 +12,8 @@
     /* --main-text: 'Century Gothic', sans-serif; */
     /* --main-text: 'Calibri', sans-serif; */
     /* --main-text: 'Segoe UI', sans-serif; */
+    --header-text: 'Arial Narrow', Arial, sans-serif;
 
-    --header-text: Arial, Helvetica, sans-serif;
     --button-text: Arial, Helvetica, sans-serif;
     --header-letter-spacing: 4px;
     --main-letter-spacing: 1px;
@@ -24,7 +24,7 @@ body {
     letter-spacing: var(--main-letter-spacing);
 }
 
-header, h1, h2, h3, h4, h5, h6, th {
+header, header h1, header h2, header h3, header h4, header h5, header h6, th {
     font-family: var(--header-text);
     letter-spacing: var(--header-letter-spacing);
 }
