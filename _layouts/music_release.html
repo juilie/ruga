@@ -47,20 +47,6 @@
   <main>
     <h2>{{ page.title }}</h2>
    
-    <!-- <p>By {{ page.artist }}</p> -->
-    <!-- <p>Released: {{ page.release_date }}</p> -->
-    <div class="link-list">
-      {% for link in page.links %}
-      <a href="{{ link.url }}">{{ link.text }}</a>
-      {% endfor %}
-    </div>
-
-    {% if page.description %}
-    <p class="album-description">
-      {{page.description}}
-    </p>
-    {% endif %}
-
     {% if page.embeds %}
     <div class="embeds">
       {% for embed in page.embeds %}
@@ -68,7 +54,16 @@
       {% endfor %}
     </div>
     {% endif %}
+    <!-- <p>By {{ page.artist }}</p> -->
+    <!-- <p>Released: {{ page.release_date }}</p> -->
+    <div class="link-list">
+      {% for link in page.links %}
+      <a href="{{ link.url }}">{{ link.text }}</a>
+      {% endfor %}
+    </div>
     
+    <img src="{{ page.cover_image }}" alt="{{ page.title }} cover" class="album-cover">
+
     {% if page.credits %}
     <div class="credits">
       <h3>Credits</h3>
@@ -88,11 +83,52 @@
       </div>
     </div>
     {% endif %}
-    <img src="{{ page.cover_image }}" alt="{{ page.title }} cover" class="album-cover">
+
+    {% if page.description %}
+    <div class="album-description-container">
+      <p class="album-description collapsed">
+        {{page.description}}
+      </p>
+      <button class="see-more-btn">See More</button>
+    </div>
+    {% endif %}
+
+
+    
+
   </main>
   <!-- <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer> -->
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const descriptionElement = document.querySelector('.album-description');
+      const seeMoreBtn = document.querySelector('.see-more-btn');
+      
+      if (descriptionElement && seeMoreBtn) {
+        // Check if the description is long enough to need truncation
+        const fullHeight = descriptionElement.scrollHeight;
+        const displayedHeight = descriptionElement.clientHeight;
+        
+        if (fullHeight <= displayedHeight) {
+          // If text fits, hide the button
+          seeMoreBtn.style.display = 'none';
+        } else {
+          // Add click event to toggle button
+          seeMoreBtn.addEventListener('click', function() {
+            if (descriptionElement.classList.contains('collapsed')) {
+              descriptionElement.classList.remove('collapsed');
+              seeMoreBtn.textContent = 'See Less';
+            } else {
+              descriptionElement.classList.add('collapsed');
+              seeMoreBtn.textContent = 'See More';
+            }
+          });
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>

@@ -2,10 +2,12 @@
   --home-color: #f2f6f5;
   --releases-color: #f8caef;
   --performances-color: #ffd6cc;
-  --works-color: #d6ffcc;
-  --about-color: #ccd6ff;
+  --works-color: #ccd4ff;
+  --about-color: rgb(255, 221, 221);
+
+  /* rgb(255, 221, 221) about */
   --inquiry-color: #ffeccf;
-  --transition-duration: 1.5s;
+  --transition-duration: 3s;
 }
 
 body, html {

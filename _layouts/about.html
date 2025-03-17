@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="{{ '/static/css/default.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/static/css/about.css' | relative_url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ '/static/css/color-transitions.css' | relative_url }}">
+
 </head>
 
 <body>
@@ -45,21 +47,9 @@
     <h1><a href="/">{{ site.title }}</a></h1>
   </header>
   <main>
-    <div class="bio-and-pic">
+    <!-- <div class="bio-and-pic">
       <img src="/static/uploads/ruth.jpg" alt="Profile Picture" class="profile-pic">
-      {% for contact in page.contacts %}
-      <p><b>{{ contact.role }}</b>: {{ contact.email }}</p>
-      {% endfor %}
-      <div>
-        {% for file in page.downloads %}
-        <a href="{{ file.file }}" class="file-download fa-download fa"
-          download>&nbsp;&nbsp;<span>{{ file.description }}</span></a>
-        {% endfor %}
-      </div>
-      <div class="bio">
-        {{ page.bio | markdownify }}
-      </div>
-    </div>
+    </div> -->
     <section class="media-section">
       <div class="media-title"><h2>Media</h2></div>
       <div class="media-list">
@@ -67,6 +57,7 @@
         <div class="media-item">
           {% if media_item.type == "Image" %}
           <img src="{{ media_item.image }}" alt="Image for {{ page.title }}">
+
 
           {% elsif media_item.type == "Video (File)" %}
           <video controls>
@@ -79,8 +70,17 @@
             <iframe src="{{ media_item.video_url }}" frameborder="0" allowfullscreen></iframe>
           </div>
           {% endif %}
+          <div class="media-caption">{{ media_item.caption }}hellllo</div>
+          {% if media_item.caption %}
+          {% endif %}
         </div>
         {% endfor %}
+      </div>
+    </section>
+
+    <section class="bio-section">
+      <div class="bio">
+        {{ page.bio | markdownify }}
       </div>
     </section>
 
@@ -95,11 +95,14 @@
         {% endfor %}
       </div>
     </section>
+    <br>
 
   </main>
   <!-- <footer>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer> -->
+  <script src="{{ '/static/js/color-transitions.js' | relative_url }}"></script>
+
 </body>
 
 </html>

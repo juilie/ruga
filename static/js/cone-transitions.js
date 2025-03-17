@@ -3,7 +3,7 @@ const pageColors = {
   home: '#f2f6f5',
   releases: '#f8caef',
   performances: '#ffd6cc',
-  works: '#d6ffcc',
+  works: '#ccd4ff',
   about: '#ccd6ff',
   inquiry: '#ffeccf'
 };

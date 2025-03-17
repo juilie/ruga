@@ -1,11 +1,11 @@
 .text-field {
     border: 2px solid #000;
+    padding: 8px 12px;
     margin-bottom: 30px;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 18px;
     width: 100%;
     max-width: calc(100% - 30px);
-    padding: 8px 12px;
     color: #333;
     margin-bottom: 20px;
 
@@ -70,12 +70,105 @@ form {
 p {
     font-family: Verdana, Geneva, sans-serif;
     font-size: 19px;
-    color: #333;
+    /* color: #333; */
     margin: 0 auto;
     margin-bottom: 20px;
-    background-color: var(--bg-2);
+    /* background-color: var(--bg-2); */
     max-width: calc(90% - 40px);
-    width: 700px;
+    width: fit-content;
     border: 2px solid #000;
     padding: 20px;
+}
+
+.embeddable-buttondown-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.embeddable-buttondown-form label {
+    margin-bottom: 10px;
+}
+
+.embeddable-buttondown-form input {
+    margin-bottom: 10px;
+}
+
+.embeddable-buttondown-form input[type="submit"] {
+    background-color: #05345f;
+    color: white;
+    padding: 15px 40px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* Newsletter signup styles */
+.booking-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.newsletter-button {
+    text-align: center;
+    /* color: white; */
+    padding: 10px 20px;
+    padding-bottom: 20px;
+    /* border: 2px outset gray; */
+    cursor: pointer;
+    width: fit-content;
+    box-sizing: border-box;
+    max-width: 95vw;
+    margin: 0 auto;
+    background-color: #ffffff;
+    animation: fadeIn 2s ease-in-out;
+    /* background-image: linear-gradient(to bottom, #adf1ff, #05345f00); */
+}
+
+@keyframes fadeIn {
+    from {
+        /* opacity: 0; */
+        background-color: #adf1ff00;
+    }
+    to {
+        /* opacity: 1; */
+        background-color: #ffffff;
+    }
+}
+.newsletter-title {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.newsletter-description {
+    font-size: 1em;
+    max-width:500px;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.newsletter-form {
+}
+
+.profile-image {
+    border-radius: 50%;
+}
+
+#bd-email {
+    border: 2px solid #000;
+    padding: 8px 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 19px;
 }
