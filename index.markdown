@@ -3,12 +3,13 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Home
+title: Ruth Garbus
 css: "/static/css/home.css"
 ---
 
  <canvas id="pastelCanvas"></canvas>
 <script>
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     const canvas = document.getElementById('pastelCanvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
@@ -22,9 +23,9 @@ css: "/static/css/home.css"
         'rgba(0, 255, 149, 0.15)'    // Mint
     ];
     // Performance optimization settings
-    const MAX_DROPS = 300;  // Limit total particles
-    const SPAWN_RATE = 3;   // Drops per frame
-    const CLEANUP_THRESHOLD = 250; // When to start removing old particles
+    const MAX_DROPS = isMobile ? 100 : 300;  // Limit total particles
+    const SPAWN_RATE = isMobile ? 1 : 3;   // Drops per frame
+    const CLEANUP_THRESHOLD = isMobile ? 80 : 250; // When to start removing old particles
     let lastX = window.innerWidth / 2;
     let lastY = window.innerHeight / 2;
     const drops = [];

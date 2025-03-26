@@ -109,32 +109,34 @@
       const seeMoreBtn = document.querySelector('.see-more-btn');
       
       if (descriptionElement && seeMoreBtn) {
-        // Check if the description is long enough to need truncation
-        const fullHeight = descriptionElement.scrollHeight;
-        const displayedHeight = descriptionElement.clientHeight;
+        // Remove the collapsed class initially to measure the full height
+        descriptionElement.classList.remove('collapsed');
         
-        if (fullHeight <= displayedHeight) {
-          // If text fits, hide the button
+        // Get the full height of the description
+        const fullHeight = descriptionElement.scrollHeight;
+        
+        // Re-add the collapsed class
+        descriptionElement.classList.add('collapsed');
+        
+        // Check if the description needs the see more button (if it's taller than our max height)
+        if (fullHeight <= 150) {
+          // If text fits within our max-height limit, hide the button
           seeMoreBtn.style.display = 'none';
+          descriptionElement.classList.remove('collapsed');
         } else {
+          // Show the button since we have truncated content
+          seeMoreBtn.style.display = 'block';
+          
           // Add click event to toggle button
           seeMoreBtn.addEventListener('click', function() {
             if (descriptionElement.classList.contains('collapsed')) {
               descriptionElement.classList.remove('collapsed');
               seeMoreBtn.textContent = 'See Less';
-              // Scroll slightly to ensure the expanded content is visible
-              setTimeout(() => {
-                const descriptionRect = descriptionElement.getBoundingClientRect();
-                if (descriptionRect.bottom > window.innerHeight) {
-                  window.scrollBy({
-                    top: 100,
-                    behavior: 'smooth'
-                  });
-                }
-              }, 100);
             } else {
               descriptionElement.classList.add('collapsed');
               seeMoreBtn.textContent = 'See More';
+              // Scroll back to description container when collapsing
+              descriptionElement.parentElement.scrollIntoView({behavior: 'smooth', block: 'start'});
             }
           });
         }
