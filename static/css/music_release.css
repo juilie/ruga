@@ -33,32 +33,57 @@ main {
 .album-description-container {
   position: relative;
   width: 100%;
+  margin: 15px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid black;
+  padding: 20px;
+  max-width: 500px;
 }
 
 .album-description {
   margin: 0;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.5s ease;
+  line-height: 1.6;
+  font-size: 1.05em;
 }
 
 .album-description.collapsed {
-  max-height: 100px; /* Adjust this value based on how many lines you want to show */
+  max-height: 150px;
   overflow: hidden;
+  position: relative;
+}
+
+.album-description.collapsed::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+  pointer-events: none;
 }
 
 .see-more-btn {
   display: block;
-  margin-top: 10px;
-  background: none;
-  border: none;
-  color: #0077cc;
+  margin: 10px auto;
+  background-color: white;
+  border: 2px solid black;
+  font-weight: bold;
+  color: black;
   cursor: pointer;
   font-size: 0.9em;
-  padding: 0;
-  text-decoration: underline;
+  padding: 5px 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .see-more-btn:hover {
-  color: #005fa3;
+  background-color: #f0f0f0;
+}
+
+.see-more-btn:active {
+  transform: translateY(1px);
 }
 
 main a {

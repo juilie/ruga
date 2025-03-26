@@ -37,6 +37,8 @@
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/static/css/default.css' | relative_url }}">
   <link rel="stylesheet" href="/static/css/music_release.css">
+  <link rel="stylesheet" href="/static/css/color-transitions.css">
+  <script src="/static/js/color-transitions.js"></script>
 
 </head>
 
@@ -120,6 +122,16 @@
             if (descriptionElement.classList.contains('collapsed')) {
               descriptionElement.classList.remove('collapsed');
               seeMoreBtn.textContent = 'See Less';
+              // Scroll slightly to ensure the expanded content is visible
+              setTimeout(() => {
+                const descriptionRect = descriptionElement.getBoundingClientRect();
+                if (descriptionRect.bottom > window.innerHeight) {
+                  window.scrollBy({
+                    top: 100,
+                    behavior: 'smooth'
+                  });
+                }
+              }, 100);
             } else {
               descriptionElement.classList.add('collapsed');
               seeMoreBtn.textContent = 'See More';

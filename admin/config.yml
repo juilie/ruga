@@ -52,7 +52,8 @@ collections:
               { label: "Type", name: "type", widget: "select", options: ["Image", "Video (File)", "Video (URL)"] },
               { label: "Image", name: "image", widget: "image", required: false, hint: "Upload an image if this is an image entry" },
               { label: "Video File", name: "video_file", widget: "file", required: false, hint: "Upload a video file if this is a video file entry" },
-              { label: "Video URL", name: "video_url", widget: "string", required: false, hint: "Paste a video URL (YouTube, Vimeo, etc.) if this is a video URL entry" }
+              { label: "Video URL", name: "video_url", widget: "string", required: false, hint: "Paste a video URL (YouTube, Vimeo, etc.) if this is a video URL entry" },
+              { label: "Caption", name: "caption", widget: "string", required: false, hint: "Add a caption for this media item" }
             ] }
           - { label: "Press", name: "press", widget: "list", fields: [
               { label: "Publication", name: "publication", widget: "string" },

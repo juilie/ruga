@@ -28,31 +28,65 @@ css: "/static/css/home.css"
     let lastX = window.innerWidth / 2;
     let lastY = window.innerHeight / 2;
     const drops = [];
-    canvas.addEventListener('mousemove', (e) => {
-        const dx = e.clientX - lastX;
-        const dy = e.clientY - lastY;
+    window.addEventListener('mousemove', (e) => {
+        handlePointerMovement(e.clientX, e.clientY);
+    });
+    // Add touch support for mobile devices
+    window.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // Prevent scrolling when touching the canvas
+        if (e.touches.length > 0) {
+            const touch = e.touches[0];
+            lastX = touch.clientX;
+            lastY = touch.clientY;
+            lastMoveTime = Date.now();
+        }
+    });
+    window.addEventListener('touchmove', (e) => {
+        e.preventDefault(); // Prevent scrolling when touching the canvas
+        if (e.touches.length > 0) {
+            const touch = e.touches[0];
+            handlePointerMovement(touch.clientX, touch.clientY);
+        }
+    });
+    window.addEventListener('touchend', (e) => {
+        // Create a small burst of particles when touch ends
+        if (drops.length < MAX_DROPS) {
+            for (let i = 0; i < 8; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = 2 + Math.random() * 3;
+                const vx = Math.cos(angle) * speed;
+                const vy = Math.sin(angle) * speed;
+                drops.push(new VectorDrop(lastX, lastY, vx, vy));
+            }
+        }
+    });
+    // Unified function to handle both mouse and touch movement
+    function handlePointerMovement(x, y) {
+        const dx = x - lastX;
+        const dy = y - lastY;
         const distance = Math.sqrt(dx * dx + dy * dy);
         const angle = Math.atan2(dy, dx);
-        // Create drops along the mouse movement
+        // Create drops along the pointer movement
         const spacing = 5;
         const steps = Math.min(SPAWN_RATE, Math.floor(distance / spacing));
         for (let i = 0; i < steps; i++) {
             const t = i / steps;
-            const x = lastX + dx * t;
-            const y = lastY + dy * t;
-            // Base velocity on mouse movement
+            const posX = lastX + dx * t;
+            const posY = lastY + dy * t;
+            // Base velocity on pointer movement
             const speed = Math.min(15, distance) * 0.2;
             const spreadAngle = angle + (Math.random() - 0.5) * Math.PI * 0.5;
             const vx = Math.cos(spreadAngle) * speed;
             const vy = Math.sin(spreadAngle) * speed;
             // Only add new drops if under the limit
             if (drops.length < MAX_DROPS) {
-                drops.push(new VectorDrop(x, y, vx, vy));
+                drops.push(new VectorDrop(posX, posY, vx, vy));
             }
         }
-        lastX = e.clientX;
-        lastY = e.clientY;
-    });
+        lastX = x;
+        lastY = y;
+        lastMoveTime = Date.now();
+    }
     // Add gentle autonomous movement when mouse isn't moving
     let lastMoveTime = Date.now();
     let autoX = window.innerWidth / 2;
@@ -103,6 +137,11 @@ css: "/static/css/home.css"
     // Update last move time on mouse movement
     canvas.addEventListener('mousemove', () => {
         lastMoveTime = Date.now();
+    });
+    // Make sure canvas resizes properly on window resize
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     });
     animate();
     class VectorDrop {
@@ -186,7 +225,6 @@ css: "/static/css/home.css"
     }
 </script>
 <nav>
-    <!-- <img src="/static/ruth.jpg" width="90" height="90" alt="logo"> -->
     <ul>
         <li class="collection-item-3 w-dyn-item">
             <a href="/releases" class="tag-link w-inline-block">
