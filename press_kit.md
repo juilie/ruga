@@ -14,9 +14,7 @@ links:
     text: Instagram
   - url: https://ruthgarbus.bandcamp.com/
     text: Bandcamp
-press_quotes:
-  - url: https://pitchfork.com/reviews/albums/ruth-garbus-alive-people/
-    text: Testing
+press_quotes: []
 media:
   - type: Image
     image: /static/uploads/ruth-garbus_by-michael-zuhorski_album-cover-profound.jpg
@@ -30,8 +28,22 @@ media:
   - type: Image
     image: /static/uploads/ruth-garbus-by-michael-zuhorski-2026.jpg
 press:
+  - url: https://theshoestring.org/2023/09/15/review-ruth-garbuss-ode-to-ephemerality/
+    publication: The Shoestring
+    quote: Alive People finds wonder in the mundane
+  - url: https://pitchfork.com/reviews/albums/ruth-garbus-alive-people/
+    publication: Alive People in Pitchfork, 2023
+    quote: Recorded in front of a live audience, the latest from the Brattleboro
+      songwriter is a meditative, idiosyncratic set about the impermanence of
+      all things.
   - publication: Pitchfork Review of Kleinmeister, 2019
     url: https://pitchfork.com/reviews/albums/ruth-garbus-kleinmeister/
+    quote: With tranquil, careful compositions that encourage introspection, the
+      Vermont musician reflects on climate anxiety without succumbing to doom
+      and gloom.
+  - url: https://www.talkhouse.com/ruth-garbuss-kleinmeister-opens-up-new-worlds/
+    publication: Chris Cohen in Talkhouse
+    quote: on Kleinmeister
 embeds:
   - code: <iframe width="560" height="315"
       src="https://www.youtube.com/embed/2UoursdOrSU?si=ko_xAqtAQ4NEEUe5"
