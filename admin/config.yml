@@ -90,3 +90,17 @@ collections:
             { label: "Embed Code", name: "code", widget: "text" },
             { label: "Platform", name: "platform", widget: "string" }
         ]}
+  - name: "performances"
+    label: "Performances"
+    folder: "_performances"
+    create: true
+    slug: "{{title | slugify}}"
+    fields:
+      - { label: "Title (for you in the CMS)", name: "title", widget: "string", hint: "Not shown on the site; used for the file name and this list." }
+      - { label: "Section", name: "category", widget: "select", options: ["upcoming", "past"], default: "upcoming" }
+      - { label: "Show date", name: "show_date", widget: "datetime", format: "YYYY-MM-DD", hint: "Controls sort order (soonest first for upcoming, most recent first for past)." }
+      - { label: "Time", name: "time", widget: "string", default: "7pm", required: false }
+      - { label: "City / area", name: "town", widget: "string" }
+      - { label: "Venue", name: "venue", widget: "string" }
+      - { label: "Other acts / billing line", name: "supporting", widget: "string", required: false, hint: "e.g. with Bernice, BLUE DiSH" }
+      - { label: "Ticket URL", name: "ticket_url", widget: "string", required: false, hint: "Leave empty for past shows or if tickets are not on sale yet." }

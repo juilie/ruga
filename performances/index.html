@@ -6,82 +6,54 @@ css: "/static/css/performances.css"
 <div class="show-container">
   <section>
     <h2>Upcoming</h2>
-    <article class="show-tile">
-        <div class="show-info">
-          <div class="show-date">
-            <span>Wed 28 July</span>
-            <span>•  7pm</span>
-          </div>
-          <h3 class="show-town">Pawtucket, RI</h3>
-          <span class="show-venue">The Mercenary List</span>
-          <span>with Bernice, BLUE DiSH</span>
-          
-        </div>
-        <div class="ticket-info">
-          <a href="#" class="ticket-link">Tickets</a>
-        </div>
-    </article>
-
-
-    <!-- <article class="post" style="border: 2px solid black; width: 90%; margin: 0 auto;">
-      <div style="background-color: #ffa9e2; border-bottom: 2px solid black; padding: 0px 10px; display: flex; justify-content: space-between; align-items: center;">
-      <h2 style="margin: 0;">July 28th, 2024 </h2><h2>7pm</h2>
-      </div>
-      <div style="padding: 10px;">
-        <p>Location</p>
-        <p>Date</p>
-        <p>Other Acts</p>
-        <p>Time</p>
-      </div>
-    </article> -->
-
-  </section>
-  <section class="past-shows">
-    <h2>Past</h2>
+    {% assign upcoming = site.performances | where: "category", "upcoming" | sort: "show_date" %}
+    {% for show in upcoming %}
     <article class="show-tile">
       <div class="show-info">
         <div class="show-date">
-          <span>Wed 28 July</span>
-          <span>•  7pm</span>
+          <span>{{ show.show_date | date: "%a %d %B" }}</span>
+          {% if show.time != nil and show.time != "" %}
+          <span>• {{ show.time }}</span>
+          {% endif %}
         </div>
-        <h3 class="show-town">Pawtucket, RI</h3>
-        <span class="show-venue">The Mercenary List</span>
-        <span>with Bernice, BLUE DiSH</span>
-        
+        <h3 class="show-town">{{ show.town }}</h3>
+        <span class="show-venue">{{ show.venue }}</span>
+        {% if show.supporting != nil and show.supporting != "" %}
+        <span>{{ show.supporting }}</span>
+        {% endif %}
       </div>
+      {% if show.ticket_url != nil and show.ticket_url != "" %}
       <div class="ticket-info">
-        <a href="#" class="ticket-link">Tickets</a>
+        <a href="{{ show.ticket_url }}" class="ticket-link">Tickets</a>
       </div>
-  </article>
-  <article class="show-tile">
-    <div class="show-info">
-      <div class="show-date">
-        <span>Wed 28 July</span>
-        <span>•  7pm</span>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  <section class="past-shows">
+    <h2>Past</h2>
+    {% assign past = site.performances | where: "category", "past" | sort: "show_date" | reverse %}
+    {% for show in past %}
+    <article class="show-tile">
+      <div class="show-info">
+        <div class="show-date">
+          <span>{{ show.show_date | date: "%a %d %B" }}</span>
+          {% if show.time != nil and show.time != "" %}
+          <span>• {{ show.time }}</span>
+          {% endif %}
+        </div>
+        <h3 class="show-town">{{ show.town }}</h3>
+        <span class="show-venue">{{ show.venue }}</span>
+        {% if show.supporting != nil and show.supporting != "" %}
+        <span>{{ show.supporting }}</span>
+        {% endif %}
       </div>
-      <h3 class="show-town">Pawtucket, RI</h3>
-      <span class="show-venue">The Mercenary List</span>
-      <span>with Bernice, BLUE DiSH</span>
-      
-    </div>
-    <div class="ticket-info">
-      <a href="#" class="ticket-link">Tickets</a>
-    </div>
-</article>
-<article class="show-tile">
-  <div class="show-info">
-    <div class="show-date">
-      <span>Wed 28 July</span>
-      <span>•  7pm</span>
-    </div>
-    <h3 class="show-town">Pawtucket, RI</h3>
-    <span class="show-venue">The Mercenary List</span>
-    <span>with Bernice, BLUE DiSH</span>
-    
-  </div>
-  <div class="ticket-info">
-    <a href="#" class="ticket-link">Tickets</a>
-  </div>
-</article>
+      {% if show.ticket_url != nil and show.ticket_url != "" %}
+      <div class="ticket-info">
+        <a href="{{ show.ticket_url }}" class="ticket-link">Tickets</a>
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
   </section>
 </div>

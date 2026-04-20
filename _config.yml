@@ -25,6 +25,8 @@ collections:
   other_works:
     output: true
     permalink: /works/:title/
+  performances:
+    output: false
 
 # Exclude from processing
 exclude:
