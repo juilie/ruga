@@ -27,7 +27,9 @@ media:
     image: null
   - type: Image
     image: /static/uploads/ruth-garbus-by-michael-zuhorski-2026.jpg
-press: []
+press:
+  - publication: Pitchfork Review of Kleinmeister, 2019
+    url: https://pitchfork.com/reviews/albums/ruth-garbus-kleinmeister/
 embeds:
   - code: <iframe width="560" height="315"
       src="https://www.youtube.com/embed/2UoursdOrSU?si=ko_xAqtAQ4NEEUe5"
