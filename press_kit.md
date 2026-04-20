@@ -14,7 +14,9 @@ links:
     text: Instagram
   - url: https://ruthgarbus.bandcamp.com/
     text: Bandcamp
-press_quotes: []
+press_quotes:
+  - url: https://pitchfork.com/reviews/albums/ruth-garbus-alive-people/
+    text: Testing
 media:
   - type: Image
     image: /static/uploads/ruth-garbus_by-michael-zuhorski_album-cover-profound.jpg
