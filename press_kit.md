@@ -28,4 +28,12 @@ media:
   - type: Image
     image: /static/uploads/ruth-garbus-by-michael-zuhorski-2026.jpg
 press: []
+embeds:
+  - code: <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/2UoursdOrSU?si=ko_xAqtAQ4NEEUe5"
+      title="YouTube video player" frameborder="0" allow="accelerometer;
+      autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+      web-share" referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+    platform: Youtube.com
 ---
