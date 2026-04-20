@@ -24,5 +24,7 @@ media:
     image: /static/uploads/ruth-garbus-elie-mcafee-hahn-nick-bisceglia-trio_photo-kyle-thomas_serious-standing-full-body.jpg
   - video_file: Ruth Garbus- I Think I'm Ready Now (official visualizer)
     type: Video (URL)
+  - type: Image
+    image: /static/uploads/ruth-garbus-by-michael-zuhorski-2026.jpg
 press: []
 ---
