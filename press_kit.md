@@ -18,5 +18,7 @@ press_quotes: []
 media:
   - type: Image
     image: /static/uploads/ruth-garbus_by-michael-zuhorski_album-cover-profound.jpg
+  - type: Image
+    image: /static/uploads/ruth-garbus_photo-kyle-thomas_ruth-laugh.jpg
 press: []
 ---
