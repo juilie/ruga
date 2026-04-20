@@ -16,8 +16,5 @@ links:
     text: Bandcamp
 press_quotes: []
 media: []
-press:
-  - publication: Pitchfork
-    quote: Alive People elevates Garbus’ practice to a rarefied plane.
-    url: https://pitchfork.com/reviews/albums/ruth-garbus-alive-people/
+press: []
 ---
