@@ -30,6 +30,8 @@ description: >-
 
   Garbus conjures a happy-go-lucky guy who grabs his "sunscreen bottle" and puts on his "pinwheel hat" to go to the beach in her perhaps most contented song to date, "Sunny Summer Guy." "And I was just fucking happier and those two songs are really happy songs," Garbus recalled, describing the emotional break for “Tip of the Hat to Yellow Fleur” and “Sunny Summer Guy,” something she credits in part to starting life-changing medication for depression and anxiety. "Creatures listen to the small guitar / Gentle and magical yet avant-garde," Garbus sings on "Tip of the Hat to Yellow Fleur," an upbeat love song to her longtime partner, fellow visionary Brattleboro songsmith Chris Weisman, over a slick vintage drum machine and vibey distorted keyboards. Here, Garbus muses: "Is there a way to prove that love is real / Lab coats and microscopes say yes." This playful pondering is just as rich as Garbus' spellbinding melodies and complexly moving chordal changes that create the ingredients for a sound that is, in fact, "gentle and magical yet avant-garde."
 links:
+  - url: https://ruthgarbus.bandcamp.com/album/profound
+    text: Pre-order Profound
   - url: https://youtu.be/2UoursdOrSU?si=D7oAuKdOEQLzIDPt
     text: Ruth Garbus- I Think I'm Ready Now (official visualizer)
 ---
