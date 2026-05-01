@@ -33,5 +33,5 @@ links:
   - url: https://ruthgarbus.bandcamp.com/album/profound
     text: Pre-order Profound
   - url: https://youtu.be/2UoursdOrSU?si=D7oAuKdOEQLzIDPt
-    text: Ruth Garbus- I Think I'm Ready Now (official visualizer)
+    text: I Think I'm Ready Now (official visualizer)
 ---
