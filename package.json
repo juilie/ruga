@@ -1,0 +1,7 @@
+{
+  "name": "ruth-garbus-site",
+  "private": true,
+  "dependencies": {
+    "sharp": "^0.33.0"
+  }
+}

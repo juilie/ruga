@@ -40,3 +40,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - compress-images.js
+  - netlify.toml
