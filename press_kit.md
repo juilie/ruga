@@ -22,9 +22,7 @@ media:
     image: /static/uploads/ruth-garbus_photo-kyle-thomas_ruth-laugh.jpg
   - type: Image
     image: /static/uploads/ruth-garbus-elie-mcafee-hahn-nick-bisceglia-trio_photo-kyle-thomas_serious-standing-full-body.jpg
-  - video_url: https://youtu.be/2UoursdOrSU?si=N4EzNBK7vp8lC8L9
-    type: Video (URL)
-    image: null
+  - type: Video (URL)
     video_url: https://www.youtube.com/watch?v=2UoursdOrSU
   - type: Image
     image: /static/uploads/ruth-garbus-by-michael-zuhorski-2026.jpg
