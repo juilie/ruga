@@ -25,6 +25,7 @@ media:
   - video_url: https://youtu.be/2UoursdOrSU?si=N4EzNBK7vp8lC8L9
     type: Video (URL)
     image: null
+    video_url: https://www.youtube.com/watch?v=2UoursdOrSU
   - type: Image
     image: /static/uploads/ruth-garbus-by-michael-zuhorski-2026.jpg
 press:
