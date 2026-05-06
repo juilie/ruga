@@ -22,7 +22,7 @@ media:
     image: /static/uploads/ruth-garbus_photo-kyle-thomas_ruth-laugh.jpg
   - type: Image
     image: /static/uploads/ruth-garbus-elie-mcafee-hahn-nick-bisceglia-trio_photo-kyle-thomas_serious-standing-full-body.jpg
-  - video_file: https://youtu.be/2UoursdOrSU?si=N4EzNBK7vp8lC8L9
+  - video_url: https://youtu.be/2UoursdOrSU?si=N4EzNBK7vp8lC8L9
     type: Video (URL)
     image: null
   - type: Image
@@ -44,12 +44,4 @@ press:
   - url: https://www.talkhouse.com/ruth-garbuss-kleinmeister-opens-up-new-worlds/
     publication: Chris Cohen in Talkhouse
     quote: on Kleinmeister
-embeds:
-  - code: <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/2UoursdOrSU?si=ko_xAqtAQ4NEEUe5"
-      title="YouTube video player" frameborder="0" allow="accelerometer;
-      autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-      web-share" referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen></iframe>
-    platform: Youtube.com
 ---

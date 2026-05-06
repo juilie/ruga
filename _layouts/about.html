@@ -59,15 +59,21 @@
           <img src="{{ media_item.image }}" alt="Image for {{ page.title }}">
 
 
-          {% elsif media_item.type == "Video (File)" %}
-          <video controls>
-            <source src="{{ media_item.video_file }}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-
           {% elsif media_item.type == "Video (URL)" %}
           <div class="video-wrapper">
-            <iframe src="{{ media_item.video_url }}" frameborder="0" allowfullscreen></iframe>
+            {% assign _vurl = media_item.video_url %}
+            {% if _vurl contains 'youtube.com/watch' %}
+              {% assign _yt_id = _vurl | split: 'v=' | last | split: '&' | first %}
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ _yt_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            {% elsif _vurl contains 'youtu.be/' %}
+              {% assign _yt_id = _vurl | split: 'youtu.be/' | last | split: '?' | first %}
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ _yt_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            {% elsif _vurl contains 'vimeo.com/' %}
+              {% assign _vimeo_id = _vurl | split: 'vimeo.com/' | last | split: '?' | first %}
+              <iframe src="https://player.vimeo.com/video/{{ _vimeo_id }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            {% else %}
+              <iframe src="{{ _vurl }}" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
           </div>
           {% endif %}
           {% if media_item.caption %}
