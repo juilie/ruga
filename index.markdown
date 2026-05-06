@@ -116,7 +116,8 @@ css: "/static/css/home.css"
         }
     }
     function animate() {
-        ctx.fillStyle = 'rgba(242,246,245, 0.03)';
+        ctx.fillStyle = '#f5f3f64d'; // #f5f3f6 with alpha 0.03 (0.03 * 255 ≈ 4D)
+   
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         // Update autonomous movement
         updateAutonomousPosition();

@@ -4,7 +4,7 @@ email: julia.h.bodian@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The home for all things Ruth Garbus.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ruthgarbus.com"
 twitter_username: rrrugaaa
 github_username:  jekyll
 
