@@ -5,9 +5,13 @@ contacts:
   - role: Booking
     email: gil@firstdatetouring.com
 header_image: /static/uploads/ruth-garbus_by-michael-zuhorski_album-cover-profound.jpg
-bio: "**Ruth Garbus** is a musician living in Brattleboro, VT. Primarily a
-  songwriter and vocalist, Ruth has released numerous solo albums, EP's, and
-  singles. She is also a member of the groups **Earth Flower** and **Gloyd**."
+bio: >-
+  Ruth Garbus is a songwriter and vocalist from Brattleboro, Vermont. She has
+  released several solo albums including Kleinmeister and Alive People, and
+  Profound, out on June 12, 2026 on Orindal Records.  
+
+
+  For the last three years Ruth has performed her solo material as a trio with elie mcafee-hahn and Nick Bisceglia. She also has performed as an experimental vocalist with a number of collaborators, and is a member of the trio Earth Flower with Sam Gendel and Phil Melanson.
 downloads: []
 links:
   - url: https://www.instagram.com/rruuggaa/
