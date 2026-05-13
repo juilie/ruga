@@ -33,6 +33,7 @@ media:
   - type: Video (URL)
     image: /static/uploads/the-lost-soul-still-1-.png
     caption: The Lost Soul (Official Video)
+    video_url: https://www.youtube.com/watch?v=_xBr8urNpcA
 press:
   - url: https://theshoestring.org/2023/09/15/review-ruth-garbuss-ode-to-ephemerality/
     publication: The Shoestring
