@@ -32,6 +32,8 @@ description: >-
 links:
   - url: https://ruthgarbus.bandcamp.com/album/profound
     text: Pre-order Profound
+  - url: https://www.youtube.com/watch?v=_xBr8urNpcA
+    text: The Lost Soul (official video)
   - url: https://youtu.be/2UoursdOrSU?si=D7oAuKdOEQLzIDPt
     text: I Think I'm Ready Now (official visualizer)
 ---
