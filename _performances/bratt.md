@@ -1,5 +1,5 @@
 ---
-title: bratt
+title: bratt 6/27/26
 show_date: 2026-06-27
 time: 7pm
 town: Brattleboro, VT
