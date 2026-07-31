@@ -4,10 +4,11 @@ title: Performances
 css: "/static/css/performances.css"
 ---
 {% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign by_date = site.performances | sort: "show_date" %}
 <div class="show-container">
-  <section>
+  <section id="upcoming-shows" class="upcoming-shows">
     <h2>Upcoming</h2>
-    {% assign by_date = site.performances | sort: "show_date" %}
+    <p class="no-shows">No upcoming shows right now — check back soon.</p>
     {% for show in by_date %}
       {% assign show_day = show.show_date | date: "%Y-%m-%d" %}
       {% if show_day >= today %}
@@ -15,9 +16,9 @@ css: "/static/css/performances.css"
       {% endif %}
     {% endfor %}
   </section>
-  <section class="past-shows">
+  <section id="past-shows" class="past-shows">
     <h2>Past</h2>
-    {% assign by_date_desc = site.performances | sort: "show_date" | reverse %}
+    {% assign by_date_desc = by_date | reverse %}
     {% for show in by_date_desc %}
       {% assign show_day = show.show_date | date: "%Y-%m-%d" %}
       {% if show_day < today %}
@@ -26,3 +27,4 @@ css: "/static/css/performances.css"
     {% endfor %}
   </section>
 </div>
+<script src="{{ '/static/js/shows.js' | relative_url }}" defer></script>

@@ -25,6 +25,16 @@ section {
         background-color: var(--bg-2);
     }
 
+/* Empty states: hide the "no upcoming shows" note once there are shows to list,
+   and drop the Past section entirely until there is something in it. */
+.upcoming-shows:has(.show-tile) .no-shows {
+    display: none;
+}
+
+.past-shows:not(:has(.show-tile)) {
+    display: none;
+}
+
 .past-shows .ticket-link {
     background-color: var(--accent);
     color: var(--white);
