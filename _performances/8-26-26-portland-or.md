@@ -5,5 +5,5 @@ time: 8pm
 town: Portland, OR
 venue: Laverne's
 supporting: Layperson, Merle Law I
-ticket_url: https://www.lonelygodpdx.com/events/ruth-garbus-friends-laverneshttps://www.lonelygodpdx.com/events/ruth-garbus-friends-lavernes
+ticket_url: https://www.lonelygodpdx.com/events/ruth-garbus-layperson-merle-law-lavernes/
 ---
